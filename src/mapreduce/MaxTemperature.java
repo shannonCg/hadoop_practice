@@ -1,5 +1,7 @@
 package mapreduce;
 
+import javax.security.auth.login.Configuration;
+
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
@@ -15,7 +17,7 @@ public class MaxTemperature {
             System.exit(-1);
         }
 
-        Job job = new Job();
+        Job job = Job.getInstance();
         job.setJarByClass(MaxTemperature.class);
         job.setJobName("Max Temperature");
 
