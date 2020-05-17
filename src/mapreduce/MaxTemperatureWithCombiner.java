@@ -16,8 +16,8 @@ public class MaxTemperatureWithCombiner {
         }
 
         Job job = Job.getInstance();
-        job.setJarByClass(MaxTemperature.class);
-        job.setJobName("Max Temperature");
+        job.setJarByClass(MaxTemperatureWithCombiner.class);
+        job.setJobName("Max Temperature with combiner");
 
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
